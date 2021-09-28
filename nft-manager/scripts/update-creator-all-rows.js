@@ -29,7 +29,8 @@ async function getSellerFee() {
 
 async function updateCreatorAllRows() {
   const strapi = new Strapi('http://localhost:1337');
-  await strapi.login('admin', 'Admin123')
+  console.log("Se está cargando el archivo123456")
+  await strapi.login('youremail@website.com', 'Admin123')
 
   const creatorAddress = await getCreatorAddress()
   const seller_fee_basis_points = await getSellerFee()
