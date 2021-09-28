@@ -1,16 +1,20 @@
 import Head from 'next/head'
 
 import { useState } from "react";
+import { Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import { useWallet } from "@solana/wallet-adapter-react";
-
+import { ListedNFT } from "./list_nft/index";
+import { decodeMetadata } from "../utils/meta";
 import {
   shortenAddress,
+  getMetadata
 } from "../utils/candy-machine";
 import useCandyMachine from '../hooks/use-candy-machine';
 import useWalletBalance from '../hooks/use-wallet-balance';
 import Countdown from 'react-countdown';
 import { WalletDisconnectButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { PublicKey } from '@solana/web3.js';
 
 
 const Home = () => {
@@ -57,8 +61,20 @@ const Home = () => {
                 renderer={renderCounter}
               />
             }
+          </button> &&
+          <button type= "button"
+           onClick={() => console.log("Pa hacer print de los listed nft ",
+           )}
+          >
+            <span>
+                List owned nft's 
+
+            </span>
+
           </button>
+          
         }
+
       </div>
 
       <div className="flex float-right space-x-5">
