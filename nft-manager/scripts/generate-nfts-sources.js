@@ -39,7 +39,7 @@ async function generateNftsSources() {
   }
 
   const strapi = new Strapi('http://localhost:1337');
-  await strapi.login('admin', 'Admin123')
+  await strapi.login('youremail@website.com', 'Admin123')
 
   let nfts = await strapi.getEntries('nf-ts')
 
