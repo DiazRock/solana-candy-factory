@@ -81,7 +81,7 @@ export default function useCandyMachine() {
             candyMachineId,
             connection
           );
-
+        console.log("After getCandyMachineState ", itemsRemaining)
         setNftsData({ itemsRemaining, itemsRedeemed, itemsAvailable });
       }
     })();
@@ -97,7 +97,6 @@ export default function useCandyMachine() {
           wallet.publicKey,
           treasury
         );
-
         const status = await awaitTransactionSignatureConfirmation(
           mintTxId,
           txTimeout,
@@ -105,7 +104,7 @@ export default function useCandyMachine() {
           "singleGossip",
           false
         );
-
+        console.log("El status acá ", status)
         if (!status?.err) {
           toast.success("Congratulations! Mint succeeded! Check on your wallet :)")
         } else {
