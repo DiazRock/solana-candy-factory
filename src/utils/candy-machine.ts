@@ -162,6 +162,7 @@ export const getCandyMachineState = async (
     preflightCommitment: "recent",
   });
 
+  console.log("EN EL ANCHOR", anchor.Program.fetchIdl)
   const idl = await anchor.Program.fetchIdl(
     CANDY_MACHINE_PROGRAM,
     provider
