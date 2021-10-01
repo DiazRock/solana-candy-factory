@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import * as anchor from "@project-serum/anchor";
-import { awaitTransactionSignatureConfirmation, CandyMachine, getCandyMachineState, mintOneToken } from "../utils/candy-machine";
+import { 
+         awaitTransactionSignatureConfirmation, 
+         CandyMachine, 
+         getCandyMachineState, 
+         mintOneToken } from "candy-machine-client";
 import { useWallet } from "@solana/wallet-adapter-react";
 import toast from 'react-hot-toast';
 import useWalletBalance from "./use-wallet-balance";
