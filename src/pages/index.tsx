@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import { useWallet } from "@solana/wallet-adapter-react";
-import { ListedNFT } from "./list_nft/index";
-import { decodeMetadata } from "../utils/meta";
 import {
   shortenAddress,
   getMetadata
@@ -61,16 +59,6 @@ const Home = () => {
                 renderer={renderCounter}
               />
             }
-          </button> &&
-          <button type= "button"
-           onClick={() => console.log("Pa hacer print de los listed nft ",
-           )}
-          >
-            <span>
-                List owned nft's 
-
-            </span>
-
           </button>
           
         }
