@@ -49,6 +49,7 @@ async function generateNftsSources() {
   for (let index = 0; index < nfts.length; index++) {
     const nft = nfts[index];
     const jsonFile = {
+      id: nft.id,
       name: nft.name,
       symbol: nft.symbol,
       description: nft.description,
